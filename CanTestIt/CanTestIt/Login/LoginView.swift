@@ -65,6 +65,7 @@ struct LoginView: View {
                         viewModel.error != nil ? Color.errorColor : Color.clear, lineWidth: 1
                     )
                 )
+                .accessibilityIdentifier(AccessibilityIDs.Login.usernameTextField)
             
             Text(viewModel.model?.passwordTitle ?? "")
                 .font(.callout)
@@ -95,6 +96,7 @@ struct LoginView: View {
                     viewModel.error != nil ? Color.errorColor : Color.clear, lineWidth: 1
                 )
             )
+            .accessibilityIdentifier(AccessibilityIDs.Login.passwordTextField)
             
             Button(
                 action: {
@@ -113,9 +115,11 @@ struct LoginView: View {
             .background(Color.primaryColor)
             .cornerRadius(.defaultCornerRadius)
             .padding([.top], Constants.bigSpacing)
+            .accessibilityIdentifier(AccessibilityIDs.Login.loginButton)
             Text(viewModel.error ?? "")
                 .font(.body)
                 .foregroundColor(Color.errorColor)
+                .accessibilityIdentifier(AccessibilityIDs.Login.wrongPasswordText)
             Spacer()
             Divider()
             
