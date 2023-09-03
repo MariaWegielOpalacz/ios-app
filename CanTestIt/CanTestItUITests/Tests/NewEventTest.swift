@@ -20,12 +20,12 @@ class NewEventTests: BaseTest {
             .swipeElement(numberOfSwipes: 4)
             .tapChoosePhotoButton()
             .enterEventName(text: "Event number 1")
-            .chooseCategory()
-            .chooseStartDate()
-            .chooseEndDate()
-            .enterPrice(text: "500 PLN")
+            .tapChooseCategory()
+            .tapAndChooseStartDate()
+            .tapAndChooseEndDate()
+            .tapPriceAndEnterPrice(text: "500 PLN")
             .switchPremiumEvent()
-            .saveEvent()
+            .tapSaveEvent()
     }
 }
 
